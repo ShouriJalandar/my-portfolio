@@ -96,34 +96,23 @@
         .card:hover { transform: translateY(-10px); background: white; box-shadow: 0 15px 30px rgba(0,0,0,0.1); }
 
         footer { background: var(--primary-blue); color: white; padding: 60px 10%; text-align: center; }
+
         /* MOBILE RESPONSIVE FIX */
-@media (max-width: 768px) {
-    .nav-links {
-        display: none; /* Hides middle links on mobile to save space */
-    }
-
-    .hero-main-title {
-        font-size: 40px !important; /* Makes the big text smaller for phones */
-    }
-
-    .container {
-        padding: 40px 5%; /* Reduces huge side gaps on mobile */
-    }
-
-    /* This is the most important fix: */
-    div[style*="display: flex"] {
-        flex-direction: column !important; /* Turns side-by-side items into top-to-bottom */
-        gap: 20px !important;
-    }
-
-    .sidebar {
-        width: 0; /* Ensures sidebar stays hidden until clicked */
-    }
-    
-    .grid {
-        grid-template-columns: 1fr; /* Forces projects to stack 1 by 1 */
-    }
-}
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+            .hero-main-title { font-size: 42px !important; }
+            .container { padding: 50px 5%; }
+            .hero { height: auto; padding: 100px 5%; }
+            
+            /* Forces all flex items to stack vertically */
+            div[style*="display: flex"] { 
+                flex-direction: column !important; 
+                gap: 30px !important; 
+            }
+            
+            .grid { grid-template-columns: 1fr; }
+            .sidebar { width: 0; }
+        }
     </style>
 </head>
 <body>
@@ -146,7 +135,7 @@
             <a href="#contact">Contact</a>
         </div>
         <div class="nav-right-icons">
-            <a href="#contact" class="touch-btn">Get in Touch</a>
+            <a href="mailto:jalandarshouri1@gmail.com" class="touch-btn">Get in Touch</a>
             <div class="menu-icon" onclick="toggleSidebar()">
                 <div></div><div></div><div></div>
             </div>
@@ -268,23 +257,15 @@
         </div>
     </section>
 
-   <footer id="contact">
-    <h2 style="font-size: 28px;">Let's Build Something Impactful</h2>
-    <p>S.B. Jain Institute of Technology, Management & Research, Nagpur</p>
-    <div style="margin: 35px 0;">
-        <a href="mailto:jalandarshouri1@gmail.com" 
-           style="color: var(--accent-blue); text-decoration: none; font-weight: bold; margin: 0 20px; font-size: 18px;">
-           Email Me
-        </a>
-        
-        <a href="https://www.linkedin.com/in/shouri-jalandar-538a10229" 
-           target="_blank" 
-           style="color: var(--accent-blue); text-decoration: none; font-weight: bold; margin: 0 20px; font-size: 18px;">
-           LinkedIn
-        </a>
-    </div>
-    <p style="opacity: 0.5; font-size: 12px; margin-top: 50px;">© 2026 Shouri Prashant Jalandar.</p>
-</footer>
+    <footer id="contact">
+        <h2 style="font-size: 28px;">Let's Build Something Impactful</h2>
+        <p>S.B. Jain Institute of Technology, Management & Research, Nagpur</p>
+        <div style="margin: 35px 0;">
+            <a href="mailto:jalandarshouri1@gmail.com" style="color: var(--accent-blue); text-decoration: none; font-weight: bold; margin: 0 20px; font-size: 18px;">Email Me</a>
+            <a href="https://www.linkedin.com/in/shouri-jalandar-538a10229" target="_blank" style="color: var(--accent-blue); text-decoration: none; font-weight: bold; margin: 0 20px; font-size: 18px;">LinkedIn</a>
+        </div>
+        <p style="opacity: 0.5; font-size: 12px; margin-top: 50px;">© 2026 Shouri Prashant Jalandar.</p>
+    </footer>
 
     <script>
         function toggleSidebar() {
@@ -305,6 +286,4 @@
         }
     </script>
 </body>
-
 </html>
-

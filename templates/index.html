@@ -96,6 +96,34 @@
         .card:hover { transform: translateY(-10px); background: white; box-shadow: 0 15px 30px rgba(0,0,0,0.1); }
 
         footer { background: var(--primary-blue); color: white; padding: 60px 10%; text-align: center; }
+        /* MOBILE RESPONSIVE FIX */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none; /* Hides middle links on mobile to save space */
+    }
+
+    .hero-main-title {
+        font-size: 40px !important; /* Makes the big text smaller for phones */
+    }
+
+    .container {
+        padding: 40px 5%; /* Reduces huge side gaps on mobile */
+    }
+
+    /* This is the most important fix: */
+    div[style*="display: flex"] {
+        flex-direction: column !important; /* Turns side-by-side items into top-to-bottom */
+        gap: 20px !important;
+    }
+
+    .sidebar {
+        width: 0; /* Ensures sidebar stays hidden until clicked */
+    }
+    
+    .grid {
+        grid-template-columns: 1fr; /* Forces projects to stack 1 by 1 */
+    }
+}
     </style>
 </head>
 <body>
@@ -269,4 +297,5 @@
         }
     </script>
 </body>
+
 </html>
